@@ -4,7 +4,8 @@ from toolchain import PythonRecipe
 
 class PlyerRecipe(PythonRecipe):
     version = "master"
-    url = "https://github.com/kivy/plyer/archive/{version}.zip"
+    #url = "https://github.com/kivy/plyer/archive/{version}.zip"
+    url = "https://github.com/stephanelsmith/plyer/archive/{version}.zip"
     depends = ["python", "pyobjus"]
     archs = ["i386"]
 
