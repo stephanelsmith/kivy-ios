@@ -1,0 +1,1 @@
+../headsupappios/ios/kivyios-buildexlude.txt

@@ -16,6 +16,7 @@ class LibSDL2Recipe(Recipe):
         if self.has_marker("patched"):
             return
         self.apply_patch("uikit-transparent.patch")
+        #self.apply_patch("trypatch.patch")
         self.set_marker("patched")
 
     def build_arch(self, arch):

@@ -1,0 +1,21 @@
+diff -r ca46df0bbcb3 src/video/uikit/SDL_uikitopengles.m
+--- a/src/video/uikit/SDL_uikitopengles.m	Sat May 21 00:12:15 2016 -0300
++++ b/src/video/uikit/SDL_uikitopengles.m	Wed Aug 17 11:23:38 2016 -0500
+@@ -116,12 +116,14 @@
+     @autoreleasepool {
+         SDLEAGLContext *context = (__bridge SDLEAGLContext *) SDL_GL_GetCurrentContext();
+ 
++        /*ssmith*/
++/*
+ #if SDL_POWER_UIKIT
+-        /* Check once a frame to see if we should turn off the battery monitor. */
+         SDL_UIKit_UpdateBatteryMonitoring();
+ #endif
+-
+-        [context.sdlView swapBuffers];
++*/
++            NSLog(@"%@", context);
++            [context.sdlView swapBuffers];
+ 
+         /* You need to pump events in order for the OS to make changes visible.
+          * We don't pump events here because we don't want iOS application events
